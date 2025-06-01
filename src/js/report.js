@@ -14,7 +14,7 @@ const api = 'http://cnms-parking-api.net.uztec.com.br/api/v1/'
 		axios.get(api + 'report/')
 			.then((response) => {
 				dataEl.innerHTML = response.data.date;
-				lucroEl.innerHTML = response.data.totalRevenue.replace("R$", " ");
+				lucroEl.innerHTML = response.data.totalRevenue.replace('<b>R$</b>', "");
 				balancoEl.innerHTML = 
 						`<tr>
 							<td>${response.data.totalEntries}</td>
