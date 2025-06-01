@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
+	  <link rel="stylesheet" href="./src/css/style.css">
+    <title>Estacionamento</title>
+</head>
+<body> 
+	<div id="navegacao" class="menu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Entrada</a>
+  <a href="saida.html">Saída</a>
+  <a href="checar.html">Checagem</a>
+  <a href="atualizar.html">Atualização</a>
+  <a href="cancelar.html">Cancelamento</a>
+  <a href="permanencia.html">Permanência</a>
+  <a href="entradas.html">Veículos</a>
+  <a href="vagas.html">Vagas</a>
+  <a href="balanco.html">Balanço</a>
+
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1>Vagas Disponíveis</h1>
+    <div class="conteudo">
+		<table border="1" >
+				<div>
+					<thead style="text-align: center;">
+					<tr>
+						<th>TOTAL</th>
+						<th>DISPONÍVEIS</th>
+						<th>OCUPADAS</th>
+					</tr>
+					</thead>
+					<tbody id="vagas">
+					
+							</tbody>
+				</div>
+			</table><br>
+		<form id="form_lvagas">
+			<button id="listagemv">Listar</button><br>
+		</form><br>
+	</div>
+
+	<script src="src/js/animacao.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="./src/js/slots.js"></script>
+</body>
+</html>

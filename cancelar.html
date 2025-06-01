@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="shortcut icon" href="./imagens/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./src/css/style.css">
+ <title>Estacionamento</title>
+</head>
+<body>
+   <div id="navegacao" class="menu">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="index.html">Entrada</a>
+  <a href="saida.html">Saída</a>
+  <a href="checar.html">Checagem</a>
+  <a href="atualizar.html">Atualização</a>
+  <a href="cancelar.html">Cancelamento</a>
+  <a href="permanencia.html">Permanência</a>
+  <a href="entradas.html">Veículos</a>
+  <a href="vagas.html">Vagas</a>
+  <a href="balanco.html">Balanço</a>
+
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+    <h1>Cancelar Entrada </h1>
+    <div class="conteudo">
+        <form id="forms_cancelar">
+            <label for="placa">Placa:</label>
+            <input placeholder="AAA0A00" type="text" id="placa"><br>
+            <button type="submit" id="cancelar">Cancelar</button>
+        </form><br>
+          <p id="cancelado"></p>
+    </div>
+    
+    <script src="src/js/animacao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./src/js/delete.js"></script>
+</body>
+</html>
