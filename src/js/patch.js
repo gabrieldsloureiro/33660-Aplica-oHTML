@@ -18,7 +18,7 @@ const regsaida = () => {
 					}
 					})
 			.then((response) => {
-					saidaEl.innerHTML =  `Veículo de placa (${response.data.plate}), permaneceu ` + Math.round(response.data.parkedTime) +'min no estacionamento, aproximadamente, '+ Math.round(response.data.parkedTime/60) +'h.';
+					saidaEl.innerHTML =  `Veículo de placa: [${response.data.plate}], permaneceu ` + Math.round(response.data.parkedTime) +'min no estacionamento, aproximadamente, '+ Math.round(response.data.parkedTime/60) +'h.';
 					console.log(response.data);
 				});
 		});

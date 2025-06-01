@@ -17,7 +17,7 @@ const api = 'http://cnms-parking-api.net.uztec.com.br/api/v1/'
 			axios.get(api + `time/${placa}`, dados)
 				 .catch(function (error) {
 					if (error.response) {
-						checagemEl.innerHTML =  `Veículo de placa (${placa}) não foi encontrado!`;
+						checagemEl.innerHTML =  `Veículo de placa: [${placa}] não encontrado!`;
 						console.log(response.data);
 					}
 					})
