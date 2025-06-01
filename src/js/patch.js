@@ -13,12 +13,12 @@ const regsaida = () => {
 			axios.patch(api + `/exit/${placa}`)
 			.catch(function (error) {
 					if (error.response) {
-						saidaEl.innerHTML =  `Não foi possível registrar a saída do seu carro.`;
+						saidaEl.innerHTML =  `Não foi possível registrar a saída do seu veículo.`;
 						console.log(response.data);
 					}
 					})
 			.then((response) => {
-					saidaEl.innerHTML =  `Carro de placa '${response.data.plate}', com horário de saída ` + Math.round(response.data.parkedTime) +'min (~'+ Math.round(response.data.parkedTime/60) +'h) , saiu do estacionamento';
+					saidaEl.innerHTML =  `Veículo de placa (${response.data.plate}), permaneceu ` + Math.round(response.data.parkedTime) +'min no estacionamento, aproximadamente, '+ Math.round(response.data.parkedTime/60) +'h.';
 					console.log(response.data);
 				});
 		});

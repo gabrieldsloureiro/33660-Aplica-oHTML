@@ -30,8 +30,8 @@ button{
    border: 3px outset black;
     background-color: lightgray;
     width: auto;
-    height: 1500px;
-    width: 500px;
+    height: 1420px;
+    width: 530px;
     margin: 20px auto;
     padding-top:10px;
     border-radius: 25px;
@@ -71,13 +71,13 @@ button{
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: gray;
   display: block;
   transition: 0.3s;
 }
 
 .menu a:hover {
-  color: #f1f1f1;
+  color: white;
 }
 
 .menu .closebtn {

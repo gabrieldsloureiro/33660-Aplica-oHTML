@@ -17,12 +17,12 @@ const cancelar = () => {
 			axios.delete(api + `cancel/${placa}`, dados)
 			.catch(function (error) {
 					if (error.response) {
-						canceladoEl.innerHTML =  `Não foi possível deletar seu carro do estacionamento.`;
+						canceladoEl.innerHTML =  `Não foi possível deletar seu veículo do estacionamento.`;
 						console.log(response.data);
 					}
 					})
 				.then((response) => {
-					canceladoEl.innerHTML =  `Carro de placa: (${response.data.plate}) foi deletado!`;
+					canceladoEl.innerHTML =  `Veículo de placa: [${response.data.plate}] deletado!`;
 					console.log(response.data);
 				});
 		});

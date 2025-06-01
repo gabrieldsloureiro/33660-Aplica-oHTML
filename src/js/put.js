@@ -22,12 +22,12 @@ const atualize = () => {
 			axios.put(api + `update/${placa}`, dados)
 			.catch(function (error) {
 					if (error.response) {
-						atualizadoEl.innerHTML =  `Não foi possível atualizar as informações do seu carro.`;
+						atualizadoEl.innerHTML =  `Não foi possível atualizar as informações do seu veículo.`;
 						console.log(response.data);
 					}
 					})
 				.then((response) => {
-					atualizadoEl.innerHTML =  `Informações do Carro com horário de entrada '${response.data.entryTime}', atualizado!`;
+					atualizadoEl.innerHTML =  `Informações Atualizadas!`;
 					console.log(response.data);
 				});
 		});

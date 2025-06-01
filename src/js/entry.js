@@ -17,8 +17,8 @@ const api = 'http://cnms-parking-api.net.uztec.com.br/api/v1/'
 					out += 
 						`<tr>
 							<td>${veiculo.plate}</td>
-							<td>${veiculo.model}</td>
 							<td>${veiculo.entryTime}</td>
+							<td>${veiculo.model}</td>
 						</tr>
 					`;
 				});

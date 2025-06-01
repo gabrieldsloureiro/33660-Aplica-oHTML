@@ -17,19 +17,16 @@ const cadastro = () => {
 			};
 			
 				axios.post(api + 'entry/', dados)
+
+					.catch(function (error) {
+					if (error.response) {
+						avisoEl.innerHTML =  `ESTAMOS LOTADOS!`;
+						console.log(response.data);
+					}
+					})
 				.then((response) => {
-					console.log(response.data.error);
-					if(response.data.error)
-					{
-						avisoEl.innerHTML =  `Estacionamento lotado.`;
-						console.log(response.data);
-					}
-					else
-					{
-						avisoEl.innerHTML =  `Carro de placa '${response.data.plate}' cadastrada com sucesso!`;
-						info();
-						console.log(response.data);
-					}
+					avisoEl.innerHTML =  `Veículo de placa: [${response.data.plate}] registrado!`;
+					console.log(response.data);
 				});
 		});
 	}

@@ -17,12 +17,12 @@ const checagem = () => {
 			axios.get(api + `check/${placa}`, dados)
 				 .catch(function (error) {
 					if (error.response) {
-						mensagemEl.innerHTML =  `Carro de placa '${placa}' não foi encontrado!`;
+						mensagemEl.innerHTML =  `Veículo de placa (${placa}) não encontrado!`;
 						console.log(response.data);
 					}
 					})
 				.then((response) => {
-					mensagemEl.innerHTML =  `Carro de placa '${response.data.plate}', com horário de entrada '${response.data.entryTime}', encontrado!`;
+					mensagemEl.innerHTML =  `Veículo de placa [${response.data.plate}], com horário de entrada (${response.data.entryTime}), encontrado!`;
 					console.log(response.data);
 				});
 		});

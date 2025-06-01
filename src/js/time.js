@@ -17,12 +17,12 @@ const api = 'http://cnms-parking-api.net.uztec.com.br/api/v1/'
 			axios.get(api + `time/${placa}`, dados)
 				 .catch(function (error) {
 					if (error.response) {
-						checagemEl.innerHTML =  `Veículo de placa '${placa}' não foi encontrada!`;
+						checagemEl.innerHTML =  `Veículo de placa (${placa}) não foi encontrado!`;
 						console.log(response.data);
 					}
 					})
 				.then((response) => {
-					checagemEl.innerHTML =  `Veículo de placa '${response.data.plate}', que permaneceu `+ Math.round(response.data.parkedTime) +'min (~'+ Math.round(response.data.parkedTime/60) +'h) , encontrada com sucesso!';
+					checagemEl.innerHTML =  `Esse veículo está há `+ Math.round(response.data.parkedTime) +'min no estacionamento, aproximadamente '+ Math.round(response.data.parkedTime/60) +'h!';
 					console.log(response.data);
 				});
 		});
