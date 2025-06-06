@@ -27,10 +27,9 @@ button{
 }
 
 .diferente{
-   border: 3px outset black;
+    border: 3px outset black;
     background-color: lightgray;
-    width: auto;
-    height: 1420px;
+    height: auto;
     width: 530px;
     margin: 20px auto;
     padding-top:10px;

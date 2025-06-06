@@ -22,7 +22,7 @@ const api = 'http://cnms-parking-api.net.uztec.com.br/api/v1/'
 					}
 					})
 				.then((response) => {
-					checagemEl.innerHTML =  `Esse veículo está há `+ Math.round(response.data.parkedTime) +'min no estacionamento, aproximadamente '+ Math.round(response.data.parkedTime/60) +'h!';
+					checagemEl.innerHTML =  `Esse veículo está há `+ Math.round(response.data.parkedTime) +'min no estacionamento, aproximadamente, '+ Math.round(response.data.parkedTime/60) +'h!';
 					console.log(response.data);
 				});
 		});
